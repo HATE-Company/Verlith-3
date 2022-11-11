@@ -1,0 +1,49 @@
+@import url('./header.css');
+@import url('./buttons.css');
+@import url('./footer.css');
+@import url('./carousel.css');
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+:root {
+    --font: 'Montserrat';
+    --color: #001220;
+    --bg-color: #FCAF3C;
+    --card-color: #001220;
+    --card-bg-color: #ffe1cc;
+    --swiper-navigation-color: #EC9355;
+    --swiper-theme-color: #EC9355;
+}
+
+.container {
+    max-width: 98.7rem;
+    margin: 0 auto;
+}
+
+.content {
+    
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat'
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    background: #001120;
+    overflow-x: hidden;
+    background-image: url("../images/testone.svg");
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 0px;
+}

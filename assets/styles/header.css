@@ -1,0 +1,330 @@
+.header {
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: transparent;
+    z-index: 101;
+    position: sticky;
+    top: 0;
+    transition: all 0.5s ease;
+}
+
+.inner.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header.logo h1 {
+    color: #fff;
+    height: 100%;
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-size: 32px;
+}
+.header.scrolled {
+    background-color: #001220;
+}
+.header.scrolled .logo, .header.scrolled .logo h1 {
+    color: #EC9355;
+}
+
+.header.mobile-active .logo, .header.mobile-active .logo h1 {
+    color: #EC9355;
+}
+
+.header.mobile-active .hamburger.menu .bar {
+    background-color: #EC9355;
+}
+
+.header.scrolled .hamburger.menu .bar {
+    background-color: #EC9355;
+}
+
+.mobile.links {
+    display: none;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: .5em;
+}
+
+.navigation a {
+    padding: 0px 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navigation a {
+    color: #000;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    height: 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+.header.scrolled .navigation a {
+    color: #fff;
+}
+
+.header.mobile-active .navigation a {
+    color: #fff;
+}
+
+.navigation a li {
+    transition: all 0.3s ease-in-out;
+
+}
+
+.navigation a:hover {
+    background-color: #001220;
+}
+
+.header.scrolled .navigation a:hover {
+    background-color: #EC9355;
+}
+
+.header.scrolled .navigation a:hover {
+    background-color: #EC9355;
+}
+
+.header.scrolled .navigation a:hover li {
+    color: #001220;
+}
+.header.mobile-active .navigation a:hover li {
+    color: #001220;
+}
+
+.navigation a:hover li {
+    color: #fff;
+}
+
+.hamburger.menu {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.hamburger.menu .bar {
+    height: 1px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+@media (max-width:760px) {
+    .header .inner {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .navigation a {
+        display: none;
+    }
+
+    .startapp .btn {
+        display: none;
+    }
+
+    .hamburger.menu {
+        display: flex;
+    }
+
+    .inner.header {
+        height: 80px;
+        position: relative;
+    }
+
+    .logo.container h1 {
+        position: absolute;
+        top: 74%;
+        left: 50%;
+        transform: translate(-72%, -50%);
+    }
+    .mobile.links a {
+        width: 100% !important;
+    }
+    .mobile.links {
+        display: flex;
+        transform: translateY(-150%);
+        flex-direction: column;
+        align-items: center;
+        background-color: #001220;
+        color: #ffe1cc;
+        font-family: 'Montserrat';
+        font-size: 16px;
+        position: absolute;
+        padding-bottom: 1rem;
+        z-index: -1;
+        width: 100%;
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.75);
+        transition: all 0.5s ease-in-out;
+        pointer-events: none;
+        opacity: 0;
+        top: 0;
+        padding-top: 80px;
+    }
+
+    .mobile.links a li {
+        padding: 1rem;
+    }
+
+
+    .mobile.links a:hover {
+        background-color: #EC9355;
+        padding: 0 0.5rem;
+        transition-duration: 200ms;
+    }
+
+    .mobile.links a li:hover {
+        color: #001220;
+        transition: ease-in-out 200ms;
+    }
+
+    .mobile.links.active {
+        transform: translateY(0);
+        display: flex;
+        transition: all 0.5s ease-in-out;
+        opacity: 1;
+        z-index: 100;
+    }
+}
+
+.secondheader {
+    height: 9rem;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.startapp {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.startapp .btn {
+    position: relative;
+    width: 150px;
+    height: 50px;
+}
+
+.startapp .btn a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    color: #ffe1cc;
+    z-index: 1;
+    font-family: 'Montserrat';
+    letter-spacing: 1px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.5s;
+    backdrop-filter: blur(15px);
+}
+
+.startapp .btn:hover a {
+    letter-spacing: 3px;
+    color: #001220;
+}
+
+.startapp .btn a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+    transform: skewX(45dg) translateX(0);
+    transition: 0.5s;
+}
+
+.startapp .btn:hover a:before {
+    transform: skewX(45deg) translateX(200%);
+}
+
+.startapp .btn::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    width: 30px;
+    height: 10px;
+    background: #1eff45;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.startapp .btn:hover::before {
+    bottom: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+    transition-delay: 0.5s;
+}
+
+.startapp .btn::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -5px;
+    width: 30px;
+    height: 10px;
+    background: #1eff45;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.startapp .btn:hover::after {
+    top: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+    transition-delay: 0.5s;
+}
+
+.startapp .btn.green::before,
+.startapp .btn.green::after {
+    background: #1eff45;
+    box-shadow: 0 0 5px #1eff45, 0 0 15px #1eff45, 0 0 30px #1eff45,
+        0 0 60px #1eff45;
+}
+
+.thirdheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
